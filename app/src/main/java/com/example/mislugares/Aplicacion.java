@@ -4,15 +4,14 @@ import android.app.Application;
 
 import java.util.List;
 
-public class Aplicacion extends Application {
+public class Aplicacion extends Application  {
     private List<Lugar> listaLugares;
     private AdaptadorLugares adaptador;
 
     @Override
     public void onCreate() {
-
         listaLugares = Lugar.ejemploLugares();
-        adaptador = new AdaptadorLugares(this,listaLugares);
+        adaptador = new AdaptadorLugares(listaLugares, this);
     }
 
     public AdaptadorLugares getAdaptador() {

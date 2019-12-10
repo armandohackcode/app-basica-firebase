@@ -71,9 +71,21 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+        Button baseDatos = (Button) findViewById(R.id.btn_base_datos);
+        baseDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lanzarBaseDatos();
+            }
+        });
     }
     public void lanzarDatosUsuario(){
         Intent i = new Intent(this, UsuarioActivity.class);
+        startActivity(i);
+    }
+    public  void lanzarBaseDatos(){
+        Intent i = new Intent(this,BaseDatos.class);
         startActivity(i);
     }
 }
