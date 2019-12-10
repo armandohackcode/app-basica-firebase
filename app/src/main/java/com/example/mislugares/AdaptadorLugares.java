@@ -39,6 +39,8 @@ public class AdaptadorLugares extends RecyclerView.Adapter<AdaptadorLugares.View
         Lugar lugar = listaLugares.get(position);
         holder.nombre.setText(lugar.nombre);
         holder.descripcion.setText(lugar.descripcion);
+        holder.nombreRegion.setText(lugar.nombreRegion);
+
     }
 
     @Override
@@ -51,11 +53,13 @@ public class AdaptadorLugares extends RecyclerView.Adapter<AdaptadorLugares.View
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView nombre;
         public  TextView descripcion;
+        public  TextView nombreRegion;
 
         public ViewHolder(View itemView){
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
             descripcion = (TextView) itemView.findViewById(R.id.descripcion);
+            nombreRegion = (TextView) itemView.findViewById(R.id.nombre_region);
         }
     }
 }
